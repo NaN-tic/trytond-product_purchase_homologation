@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data grouped="1">
+        <record model="ir.message" id="cannot_end_purchase">
+            <field name="text">Cannot end the purchase "%(purchase)s" because the line "%(line)s" needs a supplier.</field>
+        </record>
+    </data>
+</tryton>
