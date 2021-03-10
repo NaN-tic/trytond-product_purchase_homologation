@@ -22,6 +22,7 @@ class Purchase(metaclass=PoolMeta):
                         line.product.purchase_homologation_required):
                     product_suppliers = PProductSupplier.search([
                         ('template','=',line.product.template.id),
+                        ('party', '=', line.purchase.party.id),
                     ])
                     if not product_suppliers:
                         raise UserError(gettext(
