@@ -23,7 +23,7 @@ class Purchase(metaclass=PoolMeta):
                     product_suppliers = PProductSupplier.search([
                         ('template','=',line.product.template.id),
                         ('party', '=', line.purchase.party.id),
-                    ])
+                    ], limit=1)
                     if not product_suppliers:
                         raise UserError(gettext(
                             'product_purchase_homologation.cannot_end_purchase',
