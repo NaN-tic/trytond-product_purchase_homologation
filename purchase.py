@@ -4,8 +4,6 @@ from trytond.pool import Pool, PoolMeta
 from trytond.exceptions import UserError
 from trytond.i18n import gettext
 
-__all__ = ['Purchase']
-
 
 class Purchase(metaclass=PoolMeta):
     __name__ = 'purchase.purchase'
@@ -18,7 +16,7 @@ class Purchase(metaclass=PoolMeta):
         super(Purchase, cls).quote(purchases)
         for purchase in purchases:
             for line in purchase.lines:
-                if (line.product and 
+                if (line.product and
                         line.product.purchase_homologation_required):
                     product_suppliers = PProductSupplier.search([
                         ('template','=',line.product.template.id),
