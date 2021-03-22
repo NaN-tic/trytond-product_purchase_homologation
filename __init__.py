@@ -8,5 +8,6 @@ from . import purchase
 def register():
     Pool.register(
         product.Template,
+        product.Product,
         purchase.Purchase,
         module='product_purchase_homologation', type_='model')
