@@ -17,13 +17,9 @@ class Purchase(metaclass=PoolMeta):
         for purchase in purchases:
             for line in purchase.lines:
                 if (line.product and
+                        not line.product_supplier and
                         line.product.purchase_homologation_required):
-                    product_suppliers = PProductSupplier.search([
-                        ('template','=',line.product.template.id),
-                        ('party', '=', line.purchase.party.id),
-                    ], limit=1)
-                    if not product_suppliers:
-                        raise UserError(gettext(
-                            'product_purchase_homologation.cannot_end_purchase',
-                            purchase=purchase.id,
-                            line=line.rec_name))
+                    raise UserError(gettext(
+                        'product_purchase_homologation.cannot_end_purchase',
+                        purchase=purchase.id,
+                        line=line.rec_name))

@@ -17,7 +17,7 @@ Imports::
     >>> from trytond.modules.account_invoice.tests.tools import \
     ...     set_fiscalyear_invoice_sequences, create_payment_term
 
-Install purchase::
+Install product_purchase_homologation::
 
     >>> config = activate_modules('product_purchase_homologation')
 

@@ -6,6 +6,10 @@ msgctxt "field:product.template,purchase_homologation_required:"
 msgid "Purchase Homologation Required"
 msgstr "Requereix homologació"
 
+msgctxt "field:product.product,purchase_homologation_required:"
+msgid "Purchase Homologation Required"
+msgstr "Requereix homologació"
+
 msgctxt "model:ir.message,text:cannot_end_purchase"
 msgid ""
 "Cannot end the purchase \"%(purchase)s\" because the line \"%(line)s\" needs"

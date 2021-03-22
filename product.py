@@ -9,3 +9,6 @@ class Template(metaclass=PoolMeta):
 
     purchase_homologation_required = fields.Boolean('Purchase Homologation '
         'Required')
+
+class Product(metaclass=PoolMeta):
+    __name__ = 'product.product'
