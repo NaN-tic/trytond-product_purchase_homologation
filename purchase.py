@@ -1,6 +1,6 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
-from trytond.pool import Pool, PoolMeta
+from trytond.pool import PoolMeta
 from trytond.exceptions import UserError
 from trytond.i18n import gettext
 
@@ -10,9 +10,6 @@ class Purchase(metaclass=PoolMeta):
 
     @classmethod
     def quote(cls, purchases):
-        pool = Pool()
-        PProductSupplier = pool.get('purchase.product_supplier')
-
         super(Purchase, cls).quote(purchases)
         for purchase in purchases:
             for line in purchase.lines:
