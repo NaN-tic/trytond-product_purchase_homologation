@@ -23,3 +23,10 @@ class Purchase(metaclass=PoolMeta):
                         'product_purchase_homologation.cannot_end_purchase',
                         purchase=purchase.id,
                         line=line.rec_name))
+                if (line.product.purchase_homologation_required and
+                        line.product_supplier and
+                        line.product_supplier.active == False):
+                    raise UserError(gettext(
+                        'product_purchase_homologation.product_purchase_deactivate',
+                        purchase=purchase.id,
+                    ))
