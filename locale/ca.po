@@ -2,11 +2,11 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "field:product.template,purchase_homologation_required:"
+msgctxt "field:product.product,purchase_homologation_required:"
 msgid "Purchase Homologation Required"
 msgstr "Requereix homologació"
 
-msgctxt "field:product.product,purchase_homologation_required:"
+msgctxt "field:product.template,purchase_homologation_required:"
 msgid "Purchase Homologation Required"
 msgstr "Requereix homologació"
 
@@ -17,3 +17,10 @@ msgid ""
 msgstr ""
 "No es pot finalitzar la compra \"%(purchase)s\" perquè la línia \"%(line)s\""
 " necessita un proveïdor."
+
+msgctxt "model:ir.message,text:product_purchase_deactivate"
+msgid ""
+"Cannot end the purchase \"%(purchase)s\" because have a deactivate supplier."
+msgstr ""
+"No es pot finalitzar la compra \"%(purchase)s\" perquè un proveïdor "
+"desactivat."

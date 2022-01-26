@@ -6,5 +6,8 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.message" id="cannot_end_purchase">
             <field name="text">Cannot end the purchase "%(purchase)s" because the line "%(line)s" needs a supplier.</field>
         </record>
+        <record model="ir.message" id="product_purchase_deactivate">
+            <field name="text">Cannot end the purchase "%(purchase)s" because have a deactivate supplier.</field>
+        </record>
     </data>
 </tryton>
